@@ -16,10 +16,12 @@ class Button extends React.Component{
 
     handleButtonClick = () => {
         this.setState({counter: 1});
-    }
+    } //using arrow function to automatically bind with 'this'
 
     render(){
         return <button onClick={this.handleButtonClick}>{this.state.counter}</button>;
+        //can be also used as
+        //return <button onClick={() => this.handleButtonClick()}>{this.state.counter}</button>;
     }
 }
 
